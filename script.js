@@ -1,11 +1,10 @@
-$("#tabs a").on("click", function (e) {
-    e.preventDefault();
+$("#tabs .a").on("click", function (e) {
     $('#img img').hide("normal");
     if ($(this).attr("id") == "current") {
         return;
     }
     else {
-        $("#tabs a").attr("id", "");
+        $("#tabs .a").attr("id", "");
         $(this).attr("id", "current");
         $("#content div").hide();
         $($(this).attr('name')).fadeIn();
@@ -27,8 +26,7 @@ $("#tabs a").on("click", function (e) {
         }
     }
 });
-$("#studUl li a").on("click", function (e) {
-    e.preventDefault();
+$("#studUl li .a").on("click", function (e) {
     $('#img img').hide();
     $($(this).attr("name")).fadeIn();
 });

@@ -6,13 +6,14 @@ body {
     background-image: url(img/content-bckg.gif);
 }
 
-a {
+.a {
     text-decoration: none;
     color: #6495ed;
 }
 
-a:hover {
+.a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 h1 {
@@ -106,7 +107,7 @@ header {
     border-bottom: 1px solid #333;
 }
 
-#tabs a {
+#tabs .a {
     float: left;
     position: relative;
     padding: 0 40px;
@@ -120,8 +121,8 @@ header {
     opacity: 0.3;
 }
 
-#tabs a:hover,
-#tabs a:focus {
+#tabs .a:hover,
+#tabs .a:focus {
     border-bottom-color: #2ac7e1;
     opacity: 1;
     text-decoration: none;
