@@ -1,16 +1,17 @@
 $(window).ready(function () {
-    $("#tabs .a").on("click", function (e) {
+    $("#tabs span").on("click", function (e) {
         $('#img img').hide("normal");
         if ($(this).attr("id") == "current") {
             return;
         }
         else {
-            $("#tabs .a").attr("id", "");
+            $("#tabs span").attr("id", "");
             $(this).attr("id", "current");
             $("#content div").hide();
-            $($(this).attr('name')).fadeIn();
+            name = $(this).attr('class').substr(2);
+            $(name).fadeIn();
             $('#contacts').animate({'margin-right': '0px'}, 500);
-            switch ($(this).attr('name')) {
+            switch (name) {
                 case '#tab2':
                     $('#img').animate({'background-position': "-300px"}, 500);
                     break;
@@ -27,8 +28,9 @@ $(window).ready(function () {
             }
         }
     });
-    $("#studUl li .a").on("click", function (e) {
+    $("#studUl li span").on("click", function (e) {
         $('#img img').hide();
-        $($(this).attr("name")).fadeIn();
+        name = $(this).attr('class').substr(2);
+        $(name).fadeIn();
     });
 });
