@@ -1,17 +1,36 @@
-$(window).ready(function () {
-    $("#tabs span").on("click", function (e) {
-        $('#img img').hide("normal");
-        if ($(this).attr("id") == "current") {
-            return;
+$(document).ready(function(){
+    function Navigation(option){
+        var elem = option.elem;
+        var tabName;
+
+        elem.on('click', 'li', onTabClick);
+
+        function onTabClick(){
+            var li = $(this);
+
+            if(li.hasClass("current")){
+                return;
+            }
+            getTabName(li);
+            hide();
+            showTab(li);
         }
-        else {
-            $("#tabs span").attr("id", "");
-            $(this).attr("id", "current");
+
+        function getTabName(li){
+            tabName = li.attr('class').substr(2,5);
+        }
+
+        function hide(){
+            $('#img img').hide("normal");
+            elem.children().removeClass('current');
             $("#content div").hide();
-            name = $(this).attr('class').substr(2);
-            $(name).fadeIn();
-            $('#contacts').animate({'margin-right': '0px'}, 500);
-            switch (name) {
+            $(tabName).fadeIn();
+            $('.vcard').animate({'margin-right': '0px'}, 500);
+        }
+
+        function showTab(li){
+            li.addClass("current");
+            switch (tabName) {
                 case '#tab2':
                     $('#img').animate({'background-position': "-300px"}, 500);
                     break;
@@ -20,17 +39,31 @@ $(window).ready(function () {
                     break;
                 case '#tab4':
                     $('#img').animate({'background-position': "-900px"}, 500);
-                    $('#contacts').animate({'margin-right': '-300px'}, 500);
+                    $('.vcard').animate({'margin-right': '-300px'}, 500);
                     break;
                 default:
                     $('#img').animate({'background-position': "0px"}, 500);
                     break;
             }
         }
+    }
+
+    function Сertificates(option){
+        var elem = option.elem;
+
+        elem.on('click', 'li', onLiClick);
+
+        function onLiClick(){
+            $('#img img').hide();
+            name = $(this).attr('class').substr(2);
+            $(name).fadeIn();
+        }
+    }
+
+    new Navigation({
+        elem: $('#tabs')
     });
-    $("#studUl li span").on("click", function (e) {
-        $('#img img').hide();
-        name = $(this).attr('class').substr(2);
-        $(name).fadeIn();
+    new Сertificates({
+        elem: $('#studUl')
     });
 });

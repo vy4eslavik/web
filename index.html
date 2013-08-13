@@ -6,6 +6,12 @@
 
     <link href="style.css" rel="stylesheet" media="screen" type="text/css"/>
     <script src="jquery.js"></script>
+    <script src="script.js"></script>
+
+    <meta name="keywords" content="резюме, веб-разработчик, программист" />
+    <meta name="description" content="Резюме Ляутина Вячеслава на вакансию веб-разработчик" />
+    <meta name="author" lang="ru" content="Ляутин В.А." />
+
 </head>
 
 <body>
@@ -17,26 +23,25 @@
         <img id="yandex" src="img/yandex.jpg" alt="yandex" />
     </div>
     <h1>Ляутин Вячеслав Андреевич</h1>
-    <div id="contacts">
-        vy4eslavik@yandex.ua
-        <br/>(+38) 099 070 24 25
-        <br/>skype: vy4eslav2009
+    <div class="vcard">
+        <span class="email">vy4eslavik@yandex.ua</span>
+        <br/><span class="tel">(+38) 099 070 24 25</span>
+        <br/><span class="skype">skype: vy4eslav2009</span>
     </div>
 </header>
 
 <article class="wrapper">
     <nav>
         <ul id="tabs">
-            <li><span class="a #tab1" id="current">О себе</span></li>
-            <li><span class="a #tab2">Место учёбы</span></li>
-            <li><span class="a #tab3">Мой опыт</span></li>
-            <li><span class="a #tab4">Работая у вас</span></li>
+            <li class="a #tab1 current">О себе</li>
+            <li class="a #tab2">Место учёбы</li>
+            <li class="a #tab3">Мой опыт</li>
+            <li class="a #tab4">Работая у вас</li>
         </ul>
     </nav>
 
     <div id="content">
         <div id="tab1">
-
             <p>
                 Я, Ляутин Вячеслав Андреевич 1994-го года рождения. Родился и проживаю в&nbsp;городе Симферополь.
 
@@ -74,11 +79,11 @@
                 Помимо основной учёбы посещал различные курсы программирования:
             <ul id="studUl">
                 <li>2005г. &mdash;&nbsp;курсы HTML&nbsp;3 (Станция Юных Техников)</li>
-                <li><span class="a #kaliostro">2009г. &mdash;&nbsp;курсы C++&nbsp;(учебный центр &laquo;Калиостро&raquo;)</span></li>
+                <li class="a #kaliostro">2009г. &mdash;&nbsp;курсы C++&nbsp;(учебный центр &laquo;Калиостро&raquo;)</li>
                 <li>2011г. &mdash;&nbsp;школа верстки Яндекса</li>
-                <li><span class="a #uspeh">2012г. &mdash;&nbsp;курсы повышения квалификации PHP, MySQL, JS (учебный
-                    центр &laquo;Успех&raquo;)</span></li>
-                <li><span class="a #yandex">2013г. &mdash;&nbsp;школа разработки интерфейсов Яндекс</span></li>
+                <li class="a #uspeh">2012г. &mdash;&nbsp;курсы повышения квалификации PHP, MySQL, JS (учебный
+                    центр &laquo;Успех&raquo;)</li>
+                <li class="a #yandex">2013г. &mdash;&nbsp;школа разработки интерфейсов Яндекс</li>
             </ul>
             <p>
                 По&nbsp;результатам экзамена школы верстки от&nbsp;Яндекса был приглашён
@@ -127,7 +132,7 @@
         <div id="tab4">
             <p>
                 От&nbsp;работы в&nbsp;компании я&nbsp;жду новых интересных проектов. Опыт в&nbsp;решении сложных, нетривиальных задач. Общение
-и&nbsp;обмен опыта с&nbsp;коллективом. Изучение новых принципов и&nbsp;схем разработки проектов.
+                и&nbsp;обмен опыта с&nbsp;коллективом. Изучение новых принципов и&nbsp;схем разработки проектов.
             <p>
                 Работая в&nbsp;вашей компании хочу добиться личных успехов в&nbsp;карьере. А&nbsp;также быть полезным добиваясь коллективных целей.
             </p>
@@ -135,7 +140,5 @@
         </div>
     </div>
 </article>
-
-<script src="script.js"></script>
 </body>
 </html>
